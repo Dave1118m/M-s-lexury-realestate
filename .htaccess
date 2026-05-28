@@ -1,0 +1,18 @@
+RewriteEngine On
+
+# Remove .php extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+# Redirect to index
+DirectoryIndex index.php
+
+# Security: Block access to includes
+<FilesMatch "^(config|database|functions|auth)\.php$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Error pages
+ErrorDocument 404 /404.php

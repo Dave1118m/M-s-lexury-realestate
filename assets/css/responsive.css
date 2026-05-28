@@ -1,0 +1,458 @@
+/* ============================================================
+   Hawassa Luxury Real Estate - Responsive Styles
+   ============================================================ */
+
+/* Tablet (max 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .property-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .property-gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 250px 250px;
+    }
+
+    .property-gallery .gallery-main {
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+
+    .agent-profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-search {
+        flex-direction: column;
+    }
+}
+
+/* Mobile (max 768px) */
+@media (max-width: 768px) {
+
+    /* Navigation */
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--color-white);
+        border-top: 1px solid var(--color-gray-200);
+        box-shadow: var(--shadow-lg);
+        padding: 1rem;
+    }
+
+    .main-nav.active {
+        display: block;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .main-nav ul li {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid var(--color-gray-100);
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        padding-left: 1rem;
+    }
+
+    /* Hero */
+    .hero {
+        height: 70vh;
+        min-height: 500px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Grids */
+    .property-grid,
+    .category-grid,
+    .agent-grid,
+    .testimonial-grid,
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .property-card-image {
+        height: 220px;
+    }
+
+    .category-card {
+        height: 220px;
+    }
+
+    /* Property Detail */
+    .property-detail-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .property-detail-meta {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .property-gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: 250px 200px 200px;
+    }
+
+    .property-gallery .gallery-main {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .agent-contact-card {
+        position: static;
+        margin-top: 2rem;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    /* Search */
+    .filter-row {
+        flex-direction: column;
+    }
+
+    .search-filters {
+        padding: 1.5rem;
+    }
+}
+
+/* Agent portal responsive improvements */
+.dashboard-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+}
+
+.dashboard-sidebar-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.dashboard-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.dashboard-nav li a {
+    color: var(--color-dark);
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+}
+
+.dashboard-sidebar-action {
+    margin-top: 1rem;
+    border-top: 1px solid var(--color-gray-200);
+    padding-top: 1rem;
+}
+
+.dashboard-full-width {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.listings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.listing-item {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    border: 1px solid var(--color-gray-200);
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.listing-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.listing-price {
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-top: 0.25rem;
+}
+
+.listing-status {
+    font-size: 0.85rem;
+    color: var(--color-gray-500);
+    margin-top: 0.25rem;
+}
+
+.chat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.chat-item {
+    border: 1px solid var(--color-gray-200);
+    padding: 1rem;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.chat-item strong {
+    display: block;
+    font-size: 1.05rem;
+}
+
+.chat-item span {
+    color: var(--color-gray-500);
+    font-size: 0.85rem;
+}
+
+.chat-item a {
+    white-space: nowrap;
+}
+
+.dashboard-card h3 {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-gray-200);
+    padding-bottom: 0.5rem;
+}
+
+.dashboard-note {
+    color: var(--color-gray-500);
+}
+
+@media (max-width: 1024px) {
+    .dashboard-layout {
+        grid-template-columns: 1fr !important;
+    }
+
+    .listings-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-card,
+    .dashboard-sidebar-card {
+        padding: 1.75rem !important;
+    }
+
+    .dashboard-layout {
+        gap: 1rem !important;
+    }
+
+    .dashboard-nav {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .dashboard-nav li a {
+        color: var(--color-dark);
+        text-decoration: none;
+        font-weight: 600;
+        display: block;
+        padding: 0.65rem 0;
+    }
+
+    .dashboard-sidebar-action {
+        margin-top: 1rem;
+        border-top: 1px solid var(--color-gray-200);
+        padding-top: 1rem;
+    }
+
+    .dashboard-full-width {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .listings-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .listing-item {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+        border: 1px solid var(--color-gray-200);
+        padding: 1rem;
+        border-radius: 4px;
+    }
+
+    .listing-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 4px;
+        flex-shrink: 0;
+    }
+
+    .listing-price {
+        color: var(--color-gold);
+        font-weight: 600;
+        font-size: 0.95rem;
+        margin-top: 0.25rem;
+    }
+
+    .listing-status {
+        font-size: 0.85rem;
+        color: var(--color-gray-500);
+        margin-top: 0.25rem;
+    }
+
+    .chat-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .chat-item {
+        border: 1px solid var(--color-gray-200);
+        padding: 1rem;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .chat-item strong {
+        display: block;
+        font-size: 1.05rem;
+    }
+
+    .chat-item span {
+        color: var(--color-gray-500);
+        font-size: 0.85rem;
+    }
+
+    .chat-item a {
+        white-space: normal;
+        width: 100%;
+        text-align: center;
+    }
+
+    .dashboard-card h3 {
+        margin-bottom: 1.25rem;
+        border-bottom: 1px solid var(--color-gray-200);
+        padding-bottom: 0.75rem;
+    }
+
+    .dashboard-note {
+        color: var(--color-gray-500);
+    }
+}
+
+/* Stats */
+.stats-grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+}
+
+/* Small Mobile (max 480px) */
+@media (max-width: 480px) {
+    html {
+        font-size: 15px;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .hero {
+        height: 60vh;
+        min-height: 400px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-form {
+        padding: 2rem 1.5rem;
+    }
+
+    .property-detail-meta {
+        grid-template-columns: 1fr 1fr;
+    }
+}
