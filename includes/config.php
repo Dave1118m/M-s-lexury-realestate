@@ -3,7 +3,7 @@
  * Hawassa Luxury Real Estate - Configuration
  */
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'bhs_clone');
+define('DB_NAME', 'hawassa_realstate');
 define('DB_USER', 'root');
 define('DB_PASS', 'mysql');
 define('DB_CHARSET', 'utf8mb4');
